@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'initial';
+@use 'mixins';
+
+.container__inputs{
+    width: 330px;
+    box-sizing: border-box;
+    margin: auto;
+}
+.container__input-field{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    padding: 0 10px 0 10px;
+    
+}
+.container__label{
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.container__input{
+    height: 45px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40441a;
+    &:focus ~ .container__label{
+        top: -10px;
+        font-size: 13px;
+    }
+    &:valid ~ .container__label{
+        top: -10px;
+        font-size: 13px;
+        color: #5d5076;
+
+    }
+    &:focus, .container__input{
+        border-bottom:1px solid #743ae1 ;
+    }
+}
+.submit{
+    @include mixins.button;
+
+}
+.signin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
