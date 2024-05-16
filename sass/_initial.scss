@@ -1,8 +1,10 @@
 @use 'variables';
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: variables.$font_roboto;
 }
 
 body{
     background-color:variables.$color-primary;
+    font-weight: 300;
+   
 }

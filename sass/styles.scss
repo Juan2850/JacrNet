@@ -1,20 +1,28 @@
 @use 'variables';
 @use 'initial';
 @use 'mixins';
-
-.container__inputs{
-    width: 330px;
+.imagen{
+    background-image: url(/assets/img/servicio.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+}
+.section2{
+    border-radius: 24px 0px 0px 24px;
+}
+.form{
+    width: 85%;
     box-sizing: border-box;
     margin: auto;
 }
-.container__input-field{
+.form__input-field{
     display: flex;
     flex-direction: column;
     position:relative;
     padding: 0 10px 0 10px;
     
 }
-.container__label{
+.form__label{
     position:absolute;
     top: 10px;
     left: 10px;
@@ -22,26 +30,26 @@
     transition: .5s;
 }
 
-.container__input{
-    height: 45px;
+.form__input{
+    height: 40px;
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     outline: none;
-    margin-bottom: 20px;
-    color: #40441a;
-    &:focus ~ .container__label{
+    margin-bottom: 40px;
+    color: variables.$light-black-text;
+    &:focus ~ .form__label{
         top: -10px;
         font-size: 13px;
     }
-    &:valid ~ .container__label{
+    &:valid ~ .form__label{
         top: -10px;
         font-size: 13px;
-        color: #5d5076;
+        color: variables.$color-primary;
 
     }
-    &:focus, .container__input{
-        border-bottom:1px solid #743ae1 ;
+    &:focus, .form__input{
+        border-bottom:1px solid variables.$color-primary ;
     }
 }
 .submit{
@@ -56,6 +64,11 @@
 span a{
     text-decoration: none;
     font-weight: 700;
-    color: #000;
+    color: variables.$black-text;
     transition: .5s;
 }
+@media only screen and (max-width: 992px) {
+    .section2{
+        border-radius: 24px 24px 0px 0px;
+    }
+  }
