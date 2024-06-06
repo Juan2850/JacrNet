@@ -1,5 +1,5 @@
 ## JacrNet
-Diseño de interfaz gráfica html
+Diseño de interfaz gráfica html sobre un sistema de cobros de servicios de planes de internet, cable, este es un diseño Front end
 * Longin
 ![Captura de pantalla 2024-06-06 105406](https://github.com/Juan2850/JacrNet/assets/129308985/9c4d3002-e2a9-4d88-bb8f-a843537ae7aa)
 * Dashboard
