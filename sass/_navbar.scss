@@ -1,0 +1,29 @@
+@use 'variables';
+@use 'mixins';
+
+.navbar {
+    background-color: variables.$color-white;
+    box-shadow: 0 0 2rem 0 rgba(33, 37, 41, .1);
+    @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column-reverse;
+       
+    }
+    &__title{
+        color: variables.$dark-black;
+    }&__search{
+        @include mixins.search
+    }
+    
+}
+
+
+.navbar-expand .navbar-collapse {
+    min-width: 200px;
+}
+.profile,
+.avatar {
+    height: 40px;
+    width: 40px;
+   
+}

@@ -1,0 +1,48 @@
+@use '../variables';
+@use '../sidebar';
+@use '../navbar';
+
+
+
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color:rgb(231, 229, 252);
+    min-width: 0;
+}
+
+.content__information-1{
+  
+    &__person{
+     color:variables.$black-text;
+     font-size: 20px;
+     padding: 13px;
+    
+    }
+ }
+
+
+@media (min-width: 768px) {}
+
+
+
+
+
+

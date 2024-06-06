@@ -1,0 +1,78 @@
+@use 'variables';
+
+.sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color:variables.$color-white;
+    display: flex;
+    flex-direction: column;
+    &__container-profile{
+        display: flex;
+        padding: 1rem 1.5rem;
+        gap:10px;
+    }
+    &__descripcion{
+        display: block;
+        margin: 0;
+        padding: 0;
+        color:variables.$black-text;
+        font-size: 14px;
+        font-weight: 500;
+        
+    }&__rol{
+        display: block;
+        margin: -25px 0 0 0;
+        padding: 0;
+        color:variables.$dark-very-dark ;
+        font-size: 12px;
+    }
+    &.expand{
+        width: 260px;
+        min-width: 260px;
+    }&__btn{
+        background-color: transparent;
+        cursor: pointer;
+        border: 0;
+        padding: 1rem 1.5rem;
+        & i{
+            font-size: 1.5rem;
+            color: variables.$black-text;
+        }
+    }&__logo{
+        margin: auto 0;
+        &__link{
+            color:variables.$black-text;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+    }&:not(.expand) &__logo,
+    &:not(.expand) &__container-descripcion,
+     &:not(.expand) hr,
+     &:not(.expand) &__link span{
+        display: none;
+    }
+    &__nav{
+        padding: 2rem 0;
+        flex: 1 1 auto;
+    }&__link{
+        padding: .999rem 1.625rem;
+        color:variables.$dark-very-dark;
+        font-weight: 500;
+        display: block;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        border-left: 3px solid transparent;
+        & i{
+            font-size: 1.1rem;
+            margin-right: .75rem;
+           
+        }&:hover{
+            color:variables.$color-primary;
+        }&-active{
+            color:variables.$color-primary;
+        }
+    }
+    
+}

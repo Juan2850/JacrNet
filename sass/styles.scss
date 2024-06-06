@@ -1,6 +1,10 @@
 @use 'variables';
 @use 'initial';
 @use 'mixins';
+
+//@forward "../sass/pages/home";
+@forward "../sass/pages/home";
+
 .imagen{
     background-image: url(/assets/img/servicio.png);
     background-repeat: no-repeat;
@@ -9,6 +13,9 @@
 }
 .section2{
     border-radius: 24px 0px 0px 24px;
+    @media only screen and (max-width: 992px) {
+        border-radius: 24px 24px 0px 0px;
+      }
 }
 .form{
     width: 85%;
@@ -62,13 +69,7 @@
     margin-top: 25px;
 }
 span a{
-    text-decoration: none;
     font-weight: 700;
     color: variables.$black-text;
     transition: .5s;
 }
-@media only screen and (max-width: 992px) {
-    .section2{
-        border-radius: 24px 24px 0px 0px;
-    }
-  }
